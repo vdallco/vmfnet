@@ -10,7 +10,7 @@ def load_dataset(file_path):
         block_size=1024  # or shorter if your VMF files are small
     )
 
-dataset = load_dataset(".\\vmf_tokenized_corpus.txt")
+dataset = load_dataset(".\\vmf_raw_corpus.txt")
 data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
 training_args = TrainingArguments(

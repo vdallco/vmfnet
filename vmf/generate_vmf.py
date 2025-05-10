@@ -1,8 +1,10 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
+import os
 
-tokenizer = GPT2Tokenizer.from_pretrained("./vmf_gpt2_model")
-model = GPT2LMHeadModel.from_pretrained("./vmf_gpt2_model")
+model_path = os.path.abspath("../3080_model/vmf_gpt2_model/vmf_gpt2_model")
+tokenizer = GPT2Tokenizer.from_pretrained(model_path, local_files_only=True)
+model = GPT2LMHeadModel.from_pretrained(model_path, local_files_only=True)
 
 # Start with an optional VMF fragment prompt
 prompt = input("Enter a prompt > ")  # or something like: '"entity" {' if you'd like to guide structure

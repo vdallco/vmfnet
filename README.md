@@ -4,6 +4,10 @@ An exploration into machine learning and Source Map Format.
 
 ## Prerequisites
 
+```
+pip install transformers datasets accelerate
+```
+
 ### CUDA
 ```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
